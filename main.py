@@ -9,8 +9,8 @@ def startDownload():
     video = ytObject.streams.get_highest_resolution()
     video.download()
   except:
-    print('Youtube link is invalid')
-  finishLabel.configure(text='Video Successfully Downloaded!')
+    finishLabel.configure(text='Download Error :(')
+  finishLabel.configure(text='Video Successfully Downloaded :)')
 
 
 # System Settings
