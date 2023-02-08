@@ -10,7 +10,7 @@ def startDownload():
     video.download()
   except:
     print('Youtube link is invalid')
-  print('Download complete!')
+  finishLabel.configure(text='Video Successfully Downloaded!')
 
 
 # System Settings
@@ -30,6 +30,10 @@ title.pack(padx=10, pady=10)
 url_var = tkinter.StringVar()
 link = customtkinter.CTkEntry(app, width=350, height=40, textvariable=url_var)
 link.pack()
+
+# Finished Downloading
+finishLabel = customtkinter.CTkLabel(app, text='')
+finishLabel.pack()
 
 # Download Button
 download = customtkinter.CTkButton(app, text='Download', command=startDownload)
